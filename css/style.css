@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #272b30;
+  font-family: "Oxanium", sans-serif;
+}
+
+/* Start Header */
+
+header img {
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+/* End Header */
+
+/* Start Nav */
+
+nav {
+  background-color: #3a497b;
+  z-index: 9999;
+  color: white;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+  margin-top: -1.875rem;
+  width: 75%;
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover {
+  color: #09c !important;
+}
+.nav-item a.nav-link {
+  cursor: pointer;
+}
+/* End Nav */
+
+/* Start card */
+
+.card {
+  filter: grayscale(75%);
+  transition: all 0.5s, filter 0.5s 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  filter: grayscale(0);
+}
+
+.custom-card img.card-img-top {
+  padding: 13px;
+}
+.custom-card .card-body {
+  padding: 2px 13px 13px;
+}
+
+.custom-span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-footer .custom-span {
+  background-color: #32383e;
+  padding-inline: 8px;
+  border-radius: 5px;
+}
+
+/* End card */
+
+.fa-xmark {
+  color: rgb(148, 148, 148);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fa-xmark:hover {
+  color: red;
+  transform: rotate(360deg);
+}
+
+.detailsGame {
+  z-index: 9999999;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
+}
+
+/* Start Loader */
+
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* End Loader */
+
+@media (max-width: 991px) {
+  nav {
+    width: 90%;
+  }
+  .navbar .navbar-collapse .nav-item .nav-link {
+    padding: 15px 0;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .navbar-collapse {
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item:not(:last-child) .nav-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
