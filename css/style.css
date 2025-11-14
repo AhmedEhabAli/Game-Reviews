@@ -83,6 +83,7 @@ nav {
 
 .detailsGame {
   z-index: 9999999;
+  overflow-y: auto;
 }
 
 .navbar-toggler:focus {
@@ -157,3 +158,4 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
+
